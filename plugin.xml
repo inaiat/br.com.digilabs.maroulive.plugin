@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+
+   <extension
+         point="org.eclipse.ui.popupMenus">
+      <objectContribution
+            adaptable="true"
+            id="br.com.digilabs.maroulive.plugin.contribution1"
+            nameFilter="*.java"
+            objectClass="org.eclipse.core.resources.IResource">
+         <menu
+               label="Wicket Maroulive"
+               path="additions"
+               id="br.com.digilabs.maroulive.plugin.menu1">
+            <separator
+                  name="group1">
+            </separator>
+         </menu>
+         <action
+               label="Create Crud"
+               class="br.com.digilabs.maroulive.plugin.popup.actions.CrudAction"
+               menubarPath="br.com.digilabs.maroulive.plugin.menu1/group1"
+               enablesFor="1"
+               id="br.com.digilabs.maroulive.plugin.newAction">
+         </action>
+      </objectContribution>
+   </extension>
+
+</plugin>
